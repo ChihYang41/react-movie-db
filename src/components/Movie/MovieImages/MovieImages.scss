@@ -1,0 +1,13 @@
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+
+.images {
+  &-gallery {
+    padding: 20px 35px;
+    background: #000;
+  }
+
+  &-title {
+    color: #fff;
+    font-size: 24px;
+  }
+}

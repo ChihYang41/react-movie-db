@@ -1,0 +1,28 @@
+.recommendations {
+  &-container {
+    padding: 20px 35px;
+    background: #E0E0E0;
+  }
+
+  &-title {
+    font-size: 24px;
+  }
+
+  &-card {
+    transition: 0.3s all;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.ant-card-body {
+  background: #000;
+
+}
+
+.ant-card-meta-title,
+.ant-card-meta-description {
+  color: #fff;
+}

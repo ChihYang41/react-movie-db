@@ -1,0 +1,35 @@
+.videos {
+  background: rgba(0, 0, 0, .5);
+  width: 100%;
+  padding: 35px;
+
+  &-title {
+    color: #fff;
+    // text-align: center;
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  iframe {
+    border-radius: 5px;
+
+    @media(max-width: 960px) {
+      width: 500px;
+      height: 300px;
+    }
+
+    @media(max-width: 576px) {
+      width: 400px;
+      height: 205px;
+    }
+
+    @media(max-width: 475px) {
+      width: 80vw;
+      height: 50vh;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.cast {
+  &-container {
+    padding: 20px;
+    font-size: 24px;
+    background: #E0E0E0
+  }
+  &-title {
+    margin-left: 15px;
+  }
+}
+
+.ant-card-meta-description {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

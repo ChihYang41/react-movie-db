@@ -1,0 +1,45 @@
+.login {
+  &-form {
+    max-width: 576px;
+    margin: 0 auto;
+    padding: 20px 20px 10px 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+
+    &-title {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 0;
+    }
+  }
+
+  &-form label,
+  &-form span {
+    color: #fff;
+  }
+
+  &-form a {
+    color: #d9f7be;
+  }
+
+  &-icon-container {
+    margin-top: 20px;
+
+    i {
+      font-size: 24px;
+      transition: 0.3s all ease;
+      margin-right: 20px;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.3);
+      }
+    }
+  }
+}
+
+.has-error .ant-input,
+.has-error .ant-input:hover {
+  background: #000;
+  color: #fff;
+}

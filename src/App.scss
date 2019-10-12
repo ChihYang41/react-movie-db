@@ -1,0 +1,30 @@
+body {
+  color: #fff;
+}
+
+.main-backdrop {
+  width: 100%;
+  height: 100%;
+  background-image: url(https://upload.cc/i1/2019/10/01/0iLgAV.jpg);
+  background-position: center center;
+  background-size: cover;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: -100;
+}
+
+.ant-layout-content {
+  padding: 20px 50px;
+  min-height: 75vh;
+
+  @media(max-width: 768px) {
+    padding: 0;
+  }
+}
+
+.ant-layout,
+.ant-layout-footer {
+  background: transparent;
+  color: #fff;
+}

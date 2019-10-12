@@ -1,0 +1,25 @@
+.register {
+  &-form {
+    max-width: 576px;
+    margin: 0 auto;
+    padding: 20px 20px 10px 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+
+    &-title {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 0;
+    }
+  }
+
+  &-form label {
+    color: #fff;
+  }
+}
+
+.has-error .ant-input-affix-wrapper .ant-input,
+.has-error .ant-input-affix-wrapper .ant-input:hover {
+  background-color: transparent;
+  border-color: #f5222d;
+}

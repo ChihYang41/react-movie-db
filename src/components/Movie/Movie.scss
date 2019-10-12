@@ -1,0 +1,122 @@
+@keyframes backdropFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.backdrop-fadeIn {
+  -webkit-animation-name: backdropFadeIn;
+  animation-name: backdropFadeIn;
+}
+
+.backdrop-animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.movie {
+  background: rgba(0, 0, 0, .5);
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  position: relative;
+
+  @media(max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-backdrop {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: -95;
+  }
+
+  &-container {
+    width: 85%;
+    margin: 0 auto;
+    font-size: 18px;
+
+    @media(max-width: 968px) {
+      width: 100%;
+    }
+  }
+
+  &-image {
+    width: 325px;
+
+    @media(max-width: 968px) {
+      width: 350px;
+    }
+
+    @media(max-width: 900px) {
+      align-self: center;
+    }
+
+    @media(max-width: 576px) {
+      width: 300px;
+    }
+  }
+
+  &-info {
+    padding: 20px 30px 30px 40px;
+    font-weight: bold;
+
+    h3 {
+      color: #fbe555;
+      font-size: 24px;
+    }
+  }
+
+  &-tagline {
+    font-size: 18px;
+    font-style: italic
+  }
+
+  &-genres {
+    margin-top: 20px;
+  }
+
+  &-homepage {
+    color: #fbe555;
+
+    &:hover {
+      color: #fbe555;
+    }
+  }
+}
+
+.movie-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.watchlist-button {
+  margin-bottom: 20px;
+}
+
+.dollar,
+.calendar,
+.smile,
+.robot {
+  font-size: 30px;
+  margin-right: 10px
+}
+
+.ant-card-bordered {
+  border: 0px solid #000;
+}

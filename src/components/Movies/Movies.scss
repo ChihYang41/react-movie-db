@@ -1,0 +1,54 @@
+.movies {
+  &-filter {
+    border-radius: 0px;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+
+    &:hover {
+      background: transparent;
+    }
+  }
+
+  &-filter.active {
+    background: #1DA57A;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+
+  &-card {
+    transition: 0.3s all;
+    animation: fadeIn 1.5s;
+    -moz-animation: fadeIn 1.5s;
+    /* Firefox */
+    -webkit-animation: fadeIn 1.5s;
+    /* Safari and Chrome */
+    -o-animation: fadeIn 1.5s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
