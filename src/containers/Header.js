@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import 'firebase/auth';
 import { firebaseAppAuth } from '../firebase/FirebaseConfig';
 import Header from '../components/Header/Header';
+import { tokenClear } from '../store/actions/Auth';
 
 const HeaderContainer = (props) => {
   return (
@@ -15,11 +16,17 @@ const HeaderContainer = (props) => {
 const mapStateToProps = ({ auth }) => {
   return {
     userId: auth.userId,
-    token: auth.token
+    token: auth.token,
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    tokenClear: () => dispatch(tokenClear())
   }
 }
 
 export default compose(
   withFirebaseAuth({ firebaseAppAuth }),
-  connect(mapStateToProps, null)
+  connect(mapStateToProps, mapDispatchToProps)
 )(HeaderContainer)

@@ -18,6 +18,12 @@ export default function AuthReducer(state = initState, action) {
         ...state,
         loginStatus: true
       }
+    case 'TOKEN_CLEAR':
+      return {
+        ...state,
+        token: null,
+        userId: null
+      }
     default:
       return state;
   }

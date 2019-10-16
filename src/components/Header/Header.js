@@ -9,8 +9,13 @@ import SearchForm from '../Search/SearchForm';
 const AntdHeader = Layout.Header;
 
 export default class Header extends Component {
+  handleSignOut = () => {
+    const { signOut, tokenClear } = this.props;
+    signOut();
+    tokenClear();
+  }
   render() {
-    const { user, signOut } = this.props;
+    const { user } = this.props;
 
     return (
       <AntdHeader style={{ position: 'fixed', zIndex: 5, width: '100%' }}>
@@ -45,7 +50,7 @@ export default class Header extends Component {
               }
               { user &&
                   <Tooltip placement="bottom" title={'log out'}>
-                    <Icon type="logout" onClick={signOut} />
+                    <Icon type="logout" onClick={this.handleSignOut} />
                   </Tooltip>
               }
              </div>
