@@ -30,7 +30,7 @@ export default class WatchListButton extends Component {
 
     if (userId && watchlist.data === undefined) return <Spin/>
 
-    if(userId) {
+    if(userId && watchlist.data) {
       watchlistArray = Object.values(watchlist.data);
       isInWatchList = watchlistArray.find(item => item.id === movieData.id)
     }
