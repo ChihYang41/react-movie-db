@@ -1,16 +1,14 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
-import Trailer from '../components/Movie/Trailer/Trailer';
+import React from 'react'
+import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
+import Trailer from '../components/Movie/Trailer/Trailer'
 import { asyncGetTrailers } from '../store/actions/Trailer'
 
-export const TrailerContainer = (props) => {
-  return (
-    <Trailer {...props} />
-  )
+export const TrailerContainer = props => {
+  return <Trailer {...props} />
 }
 
-export const mapStateToProps = (state) => {
+export const mapStateToProps = state => {
   return {
     trailers: state.trailers.trailers,
     isGetTrailersLoading: state.trailers.isGetTrailersLoading,
@@ -18,13 +16,12 @@ export const mapStateToProps = (state) => {
   }
 }
 
-export const mapDispatchToProps = (dispatch) => {
+export const mapDispatchToProps = dispatch => {
   return {
-    getTrailers: (id) => dispatch(asyncGetTrailers(id))
+    getTrailers: id => dispatch(asyncGetTrailers(id))
   }
 }
 
 export default withRouter(
-  connect(mapStateToProps, mapDispatchToProps)
-  (TrailerContainer)
-);
+  connect(mapStateToProps, mapDispatchToProps)(TrailerContainer)
+)

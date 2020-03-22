@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Layout, Menu, Row, Col, Icon, Tooltip } from 'antd';
-import firebase from 'firebase';
 import PropTypes from 'prop-types';
 import './Header.scss';
 import SearchForm from '../Search/SearchForm';

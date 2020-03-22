@@ -25,7 +25,7 @@ export default class WatchListButton extends Component {
   }
 
   render() {
-    const { user, userId, movieData, watchlist } = this.props;
+    const { userId, movieData, watchlist } = this.props;
     let watchlistArray, isInWatchList;
 
     if (userId && watchlist.data === undefined) return <Spin/>
